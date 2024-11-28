@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+canvas {
+    display: block;
+}
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 500px;
+}
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.volume-control {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 0;
+    border-radius: 15px;
+    color: white;
+    transition: width 0.3s, border-radius 0.3s;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+#volume-icon {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+}
+.volume-control:hover {
+    width: 145px;
+}
+.volume-control input {
+    margin-left: 10px;
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s, opacity 0.3s;
+}
+.volume-control:hover input {
+    width: 100px;
+    opacity: 1;
+}
+.volume-control input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+}
+.volume-control input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px;
+}
+.volume-control input::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: #333;
+    border-radius: 5px;
+}
+.volume-control input::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.music-player {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.music-player input[type="range"] {
+    width: 60%;
+    margin: 0 10px;
+}
+.music-player span {
+    flex: 1;
+}

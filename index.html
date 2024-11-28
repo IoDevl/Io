@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falling Stars with Blurred Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="starsCanvas"></canvas>
+    <div class="card">
+        <img src="profile.jpg" alt="Profile" class="profile-pic">
+        <h1>Io</h1>
+        <p>“Two possibilities exist: either we are alone in the Universe or we are not. Both are equally terrifying.” —Arthur C. Clarke</p>
+        <p>Nothing to see here yet, just enjoy the music :D</p>
+    </div>
+    <div class="volume-control">
+        <span id="volume-icon">🔊</span>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="1">
+    </div>
+    <audio id="background-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="music-player">
+        <span id="track-name">Phantom Liberty</span>
+        <input type="range" id="music-timeline" min="0" max="348" value="0" disabled>
+        <span id="current-time">0:00</span> / <span id="total-time">5:48</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
